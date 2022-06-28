@@ -7,11 +7,17 @@ using UnityEngine.SceneManagement;
 
 public class Interactable : MonoBehaviour
 {
+    [SerializeField]
+    private GameObject planeGameOn;
+    [SerializeField]
+    private GameObject planeGameOff;
+
+    [SerializeField]
+    private GameObject interactUI;
+
     public bool isInRange;
-    public bool minigameRunning = false;
 
     public InputAction actionKey;
-    public InputAction escapeAction;
 
     public UnityEvent interactAction;
 
@@ -20,8 +26,6 @@ public class Interactable : MonoBehaviour
     {
         actionKey.Enable();
         actionKey.performed += _ => KeyPress();
-        escapeAction.Enable();
-        escapeAction.performed += _ => EscapeAction();
 
         SceneManager.sceneUnloaded += OnMinigameUnloaded;
     }
@@ -29,8 +33,6 @@ public class Interactable : MonoBehaviour
     {
         actionKey.performed -= _ => KeyPress();
         actionKey.Disable();
-        escapeAction.performed -= _ => EscapeAction();
-        escapeAction.Disable();
 
         SceneManager.sceneUnloaded -= OnMinigameUnloaded;
     }
@@ -38,36 +40,33 @@ public class Interactable : MonoBehaviour
 
     private void OnMinigameUnloaded(Scene scene)
     {
-        if(scene.name == "Slippie's")
+        if (scene.name == "Slippie's")
         {
-            minigameRunning = false;
-             interactAction.Invoke();
+            SLApplicationManager.instance.minigameRunning = false;
+            planeGameOn.SetActive(SLApplicationManager.instance.minigameRunning);
+            planeGameOff.SetActive(!SLApplicationManager.instance.minigameRunning);
+            interactAction.Invoke();
         }
     }
 
     private void KeyPress()
     {
-        if (isInRange && !minigameRunning)
+        if (isInRange && !SLApplicationManager.instance.minigameRunning)
         {
             interactAction.Invoke();
-            minigameRunning = true;
+            interactUI.SetActive(false);
+            SLApplicationManager.instance.minigameRunning = true;
+            planeGameOn.SetActive(SLApplicationManager.instance.minigameRunning);
+            planeGameOff.SetActive(!SLApplicationManager.instance.minigameRunning);
             SceneManager.LoadSceneAsync("Slippie's", LoadSceneMode.Additive);
         }
     }
-
-    private void EscapeAction()
-    {
-        if (isInRange && !minigameRunning)
-        {
-           
-        }
-    }
-
     private void OnTriggerEnter(Collider other)
     {
         if (other.transform.parent.name == "FakeHarold")
         {
             isInRange = true;
+            interactUI.SetActive(true);
         }
     }
 
@@ -76,14 +75,8 @@ public class Interactable : MonoBehaviour
         if (other.transform.parent.name == "FakeHarold")
         {
             isInRange = false;
+            interactUI.SetActive(false);
         }
     }
 
-    //private void Update()
-    //{
-    //    if(isInRange && SLGameManager.instance)
-    //    {
-    //        minigameRunning = SLGameManager.instance.slippiesIsRunning;
-    //    }
-    //}
 }
