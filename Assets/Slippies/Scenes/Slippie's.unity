@@ -24,7 +24,7 @@ RenderSettings:
   m_AmbientEquatorColor: {r: 0.114, g: 0.125, b: 0.133, a: 1}
   m_AmbientGroundColor: {r: 0.047, g: 0.043, b: 0.035, a: 1}
   m_AmbientIntensity: 1
-  m_AmbientMode: 0
+  m_AmbientMode: 4
   m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
   m_SkyboxMaterial: {fileID: 0}
   m_HaloStrength: 0.5
@@ -371,6 +371,8 @@ Transform:
   m_Children:
   - {fileID: 1967309028}
   - {fileID: 5336838946956447824}
+  - {fileID: 864515991}
+  - {fileID: 2948408570291938180}
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1117,11 +1119,15 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 7210079682219745639}
+    m_TransformParent: {fileID: 338645597}
     m_Modifications:
     - target: {fileID: 1964850591663378633, guid: 2449107b06e8d754583fe0a100ff7fcd, type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1964850591663378633, guid: 2449107b06e8d754583fe0a100ff7fcd, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 25
       objectReference: {fileID: 0}
     - target: {fileID: 1964850591663378633, guid: 2449107b06e8d754583fe0a100ff7fcd, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1178,11 +1184,11 @@ Transform:
   m_GameObject: {fileID: 2948408570291938182}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 3, z: 0}
-  m_LocalScale: {x: 10, y: 6, z: 1}
+  m_LocalScale: {x: 25, y: 6, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 7210079682219745639}
-  m_RootOrder: 4
+  m_Father: {fileID: 338645597}
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &2948408570291938181
 SpriteRenderer:
@@ -1224,7 +1230,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -10
   m_Sprite: {fileID: 21300000, guid: d42a4cf3a55e33c4cb405676b4178ad1, type: 3}
   m_Color: {r: 0.21176472, g: 0.30588236, b: 0.19215688, a: 1}
   m_FlipX: 0
@@ -5338,8 +5344,6 @@ Transform:
   - {fileID: 614641492}
   - {fileID: 1679505785}
   - {fileID: 1828294315}
-  - {fileID: 864515991}
-  - {fileID: 2948408570291938180}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

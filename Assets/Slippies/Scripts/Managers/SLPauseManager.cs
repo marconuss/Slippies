@@ -24,9 +24,11 @@ public class SLPauseManager : MonoBehaviour
 
     public delegate void PauseAction(bool isPaused);
     public delegate void ResetAction();
+    public delegate void ExitAction();
 
     public PauseAction OnPause;
     public ResetAction OnReset;
+    public ExitAction OnExit;
 
 
     private void Awake()

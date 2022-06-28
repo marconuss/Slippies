@@ -388,11 +388,5 @@ namespace StarterAssets
                 AudioSource.PlayClipAtPoint(LandingAudioClip, transform.TransformPoint(_controller.center), FootstepAudioVolume);
             }
         }
-
-        public void DisableInput()
-        {
-            Debug.Log("diasable Input!");
-        }
-
     }
 }

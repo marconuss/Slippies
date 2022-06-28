@@ -2,7 +2,6 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
-
 public class SLGameManager : MonoBehaviour
 {
     public static SLGameManager instance;
@@ -38,13 +37,14 @@ public class SLGameManager : MonoBehaviour
     private void Awake()
     {
         inputActions = new SlippiesInput();
+        inputActions.Enable();
 
         resetHighScore = inputActions.UI.Reset;
         multiplyScore = inputActions.UI.AddBonus;
         resetHighScore.Enable();
-        resetHighScore.performed += ResetHighScore;
+        resetHighScore.performed += _ => ResetHighScore();
         multiplyScore.Enable();
-        multiplyScore.performed += ScoreMultiplier;
+        multiplyScore.performed += _ => ScoreMultiplier();
 
         instance = this;
     }
@@ -58,11 +58,15 @@ public class SLGameManager : MonoBehaviour
             SLPauseManager.instance.OnPause += OnPause;
             SLPauseManager.instance.OnReset += OnReset;
         }
+
     }
 
     private void OnDisable()
     {
         resetHighScore.Disable();
+        multiplyScore.Disable();
+        resetHighScore.performed -= _ => ResetHighScore();
+        multiplyScore.performed -= _ => ScoreMultiplier();
         PlayerPrefs.SetInt(scorePlayerPrefs, highScore);
         if (SLPauseManager.instance)
         {
@@ -93,14 +97,14 @@ public class SLGameManager : MonoBehaviour
         scoreDisplay.UpdateNumberUI(score);
 
     }
-    public void ResetHighScore(InputAction.CallbackContext context)
+    public void ResetHighScore()
     {
         highScore = 0;
         PlayerPrefs.SetInt(scorePlayerPrefs, 0);
         highScoreDisplay.ResetNumberUI();
     }
 
-    public void ScoreMultiplier(InputAction.CallbackContext context)
+    public void ScoreMultiplier()
     {
         scoreMultiplier += 1;
     }

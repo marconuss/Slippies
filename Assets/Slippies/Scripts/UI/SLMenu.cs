@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.SceneManagement;
 
 public class SLMenu : MonoBehaviour
 {
@@ -29,17 +30,17 @@ public class SLMenu : MonoBehaviour
     private float speed = 2;
 
     private InputAction submit;
-    private InputAction cancel;
+    private InputAction escape;
 
     private void OnEnable()
     {
         submit = SLGameManager.instance.inputActions.UI.Submit;
-        cancel = SLGameManager.instance.inputActions.UI.Cancel;
+        escape = SLGameManager.instance.inputActions.UI.Cancel;
 
         submit.Enable();
-        submit.performed += OnSubmit;
-        cancel.Enable();
-        cancel.performed += OnCancel;
+        submit.performed += _ => OnSubmit();
+        escape.Enable();
+        escape.performed += _ => OnCancel();
     }
 
     private void Start()
@@ -60,10 +61,10 @@ public class SLMenu : MonoBehaviour
         {
             SLPauseManager.instance.OnPause -= OnPause;
         }
-        submit.performed -= OnSubmit;
-        cancel.performed -= OnCancel;
+        submit.performed -= _ => OnSubmit();
+        escape.performed -= _ => OnCancel();
         submit.Disable();
-        cancel.Disable();
+        escape.Disable();
     }
 
     private void OnPause(bool isPaused)
@@ -107,7 +108,7 @@ public class SLMenu : MonoBehaviour
         }
     }
 
-    public void OnSubmit(InputAction.CallbackContext context)
+    public void OnSubmit()
     {
         if (playerInPosition && !gameStarted)
         {
@@ -126,7 +127,7 @@ public class SLMenu : MonoBehaviour
             }
         }
     }
-    public void OnCancel(InputAction.CallbackContext context)
+    public void OnCancel()
     {
         if (gameStarted)
         {
@@ -141,8 +142,8 @@ public class SLMenu : MonoBehaviour
         }
         else if (!gameStarted && playerInPosition)
         {
-            //Debug.Log("quit application");
-            Application.Quit();
+            SLGameManager.instance.inputActions.Disable();
+            SceneManager.UnloadSceneAsync("Slippie's");
         }
     }
 
