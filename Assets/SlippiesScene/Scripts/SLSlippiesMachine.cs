@@ -5,23 +5,9 @@ using UnityEngine.InputSystem;
 
 public class SLSlippiesMachine : MonoBehaviour
 {
-    private bool isReadyToInteract;
-
-    private void OnTriggerEnter(Collider other)
+    public void StartSlippies()
     {
-        if(other.transform.parent.name == "FakeHarold")
-        {
-            isReadyToInteract = true;
-            
-        }
-    }
-
-    private void OnTriggerExit(Collider other)
-    {
-        if (other.transform.parent.name == "FakeHarold")
-        {
-            isReadyToInteract = false;
-        }
+        Debug.Log("start Slippies!");
     }
 
 }

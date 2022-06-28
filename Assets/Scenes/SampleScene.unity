@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 2076.8745, g: 2169.579, b: 2535.567, a: 1}
+  m_IndirectSpecularColor: {r: 2172.0464, g: 2301.851, b: 2750.434, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -5028,24 +5028,6 @@ PlayableDirector:
     - 0970ba4e06089ad48aed7fbf91cf285a: {fileID: 1340223833}
     - 75339bffd12dc584ca234ee49055fe63: {fileID: 620052163}
     - d01260d53c3e7fa43bc693843a18b94d: {fileID: 1932624322}
---- !u!1 &1115980782 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2400098106667475628, guid: 511ce2b611ccf594baa93cf7c8716c1c, type: 3}
-  m_PrefabInstance: {fileID: 1765814994}
-  m_PrefabAsset: {fileID: 0}
---- !u!65 &1115980786
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1115980782}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 10, y: 2.220446e-16, z: 9.999999}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1143592343
 GameObject:
   m_ObjectHideFlags: 3
@@ -8642,62 +8624,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 2400098107835777411, guid: 511ce2b611ccf594baa93cf7c8716c1c, type: 3}
-      propertyPath: interact.m_Id
-      value: 0f78f939-d92e-42c5-8c42-5a4ccef5755f
-      objectReference: {fileID: 0}
-    - target: {fileID: 2400098107835777411, guid: 511ce2b611ccf594baa93cf7c8716c1c, type: 3}
-      propertyPath: interact.m_Name
-      value: Interact
-      objectReference: {fileID: 0}
-    - target: {fileID: 2400098107835777411, guid: 511ce2b611ccf594baa93cf7c8716c1c, type: 3}
-      propertyPath: interact.m_Type
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2400098107835777411, guid: 511ce2b611ccf594baa93cf7c8716c1c, type: 3}
-      propertyPath: interact.m_ExpectedControlType
-      value: Button
-      objectReference: {fileID: 0}
-    - target: {fileID: 2400098107835777411, guid: 511ce2b611ccf594baa93cf7c8716c1c, type: 3}
-      propertyPath: interact.m_SingletonActionBindings.Array.size
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 2400098107835777411, guid: 511ce2b611ccf594baa93cf7c8716c1c, type: 3}
-      propertyPath: interact.m_SingletonActionBindings.Array.data[0].m_Id
-      value: acc59f5d-6dbe-44b5-9364-cb80a4eaf79c
-      objectReference: {fileID: 0}
-    - target: {fileID: 2400098107835777411, guid: 511ce2b611ccf594baa93cf7c8716c1c, type: 3}
-      propertyPath: interact.m_SingletonActionBindings.Array.data[1].m_Id
-      value: 55a98ccc-0b7d-47f3-9a42-f1fc6b4ded6f
-      objectReference: {fileID: 0}
-    - target: {fileID: 2400098107835777411, guid: 511ce2b611ccf594baa93cf7c8716c1c, type: 3}
-      propertyPath: interact.m_SingletonActionBindings.Array.data[0].m_Path
-      value: <Keyboard>/f
-      objectReference: {fileID: 0}
-    - target: {fileID: 2400098107835777411, guid: 511ce2b611ccf594baa93cf7c8716c1c, type: 3}
-      propertyPath: interact.m_SingletonActionBindings.Array.data[1].m_Path
-      value: <Gamepad>/buttonSouth
-      objectReference: {fileID: 0}
-    - target: {fileID: 2400098107835777411, guid: 511ce2b611ccf594baa93cf7c8716c1c, type: 3}
-      propertyPath: interact.m_SingletonActionBindings.Array.data[0].m_Action
-      value: Interact
-      objectReference: {fileID: 0}
-    - target: {fileID: 2400098107835777411, guid: 511ce2b611ccf594baa93cf7c8716c1c, type: 3}
-      propertyPath: interact.m_SingletonActionBindings.Array.data[1].m_Action
-      value: Interact
-      objectReference: {fileID: 0}
-    - target: {fileID: 2400098107835777411, guid: 511ce2b611ccf594baa93cf7c8716c1c, type: 3}
-      propertyPath: interact.m_SingletonActionBindings.Array.data[0].m_Interactions
-      value: Press
-      objectReference: {fileID: 0}
-    - target: {fileID: 2400098107835777411, guid: 511ce2b611ccf594baa93cf7c8716c1c, type: 3}
-      propertyPath: interact.m_SingletonActionBindings.Array.data[1].m_Interactions
-      value: Press
-      objectReference: {fileID: 0}
-    - target: {fileID: 2400098107835777412, guid: 511ce2b611ccf594baa93cf7c8716c1c, type: 3}
-      propertyPath: m_IsTrigger
-      value: 1
-      objectReference: {fileID: 0}
+    - target: {fileID: 1765814996, guid: 511ce2b611ccf594baa93cf7c8716c1c, type: 3}
+      propertyPath: interactAction.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1854558613}
     - target: {fileID: 2400098107835777414, guid: 511ce2b611ccf594baa93cf7c8716c1c, type: 3}
       propertyPath: m_Name
       value: ArcadeMachine
@@ -9180,6 +9110,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3893294197879345259, guid: 64dce48905ffd9b4293e595fa6941544, type: 3}
   m_PrefabInstance: {fileID: 5854716700973554937}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1854558613 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4416926081852918493, guid: 64dce48905ffd9b4293e595fa6941544, type: 3}
+  m_PrefabInstance: {fileID: 5854716700973554937}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62899f850307741f2a39c98a8b639597, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1854883467
 GameObject:
   m_ObjectHideFlags: 3
@@ -11854,23 +11795,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8944336655422409503, guid: f6d148d888ffbf54b9afe9936dfaec1f, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.20000002
+      value: 0.07999953
       objectReference: {fileID: 0}
     - target: {fileID: 8944336655422409503, guid: f6d148d888ffbf54b9afe9936dfaec1f, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.44500017
+      value: 1.283
       objectReference: {fileID: 0}
     - target: {fileID: 8944336655422409503, guid: f6d148d888ffbf54b9afe9936dfaec1f, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -2.3341486
+      value: 5.5050015
       objectReference: {fileID: 0}
     - target: {fileID: 8944336655422409503, guid: f6d148d888ffbf54b9afe9936dfaec1f, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 1
+      value: 0.9396926
       objectReference: {fileID: 0}
     - target: {fileID: 8944336655422409503, guid: f6d148d888ffbf54b9afe9936dfaec1f, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0
+      value: 0.3420201
       objectReference: {fileID: 0}
     - target: {fileID: 8944336655422409503, guid: f6d148d888ffbf54b9afe9936dfaec1f, type: 3}
       propertyPath: m_LocalRotation.y
