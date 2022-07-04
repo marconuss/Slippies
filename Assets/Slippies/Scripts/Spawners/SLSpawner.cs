@@ -48,6 +48,22 @@ public class SLSpawner : MonoBehaviour
         }
     }
 
+    private void Spawn()
+    {
+        if (time > queueTime / SLGameManager.instance.gameSpeed)
+        {
+            GameObject obj = GetPooledObject();
+            if (obj != null)
+            {
+                obj.transform.position = GetNewSpawnPosition();
+                obj.SetActive(true);
+            }
+
+            time = 0;
+        }
+        time += Time.deltaTime;
+    }
+
     public GameObject GetPooledObject()
     {
         for (int i = 0; i < poolSize; i++)

@@ -5666,8 +5666,6 @@ MonoBehaviour:
   restartButton: {fileID: 7210875973585630277}
   gameoverButton: {fileID: 7210875973225948693}
   player: {fileID: 0}
-  gameStarted: 0
-  playerInPosition: 0
   speed: 1
 --- !u!1 &7210875974442712131
 GameObject:

@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class SLFlag : MonoBehaviour
 {
-    private int timesEnabled;
 
     private List<Vector3> hitPositionList = new List<Vector3>()
     {

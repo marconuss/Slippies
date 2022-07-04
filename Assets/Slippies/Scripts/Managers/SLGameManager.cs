@@ -36,6 +36,8 @@ public class SLGameManager : MonoBehaviour
 
     private void Awake()
     {
+        instance = this;
+
         inputActions = new SlippiesInput();
         inputActions.Enable();
 
@@ -46,7 +48,6 @@ public class SLGameManager : MonoBehaviour
         multiplyScore.Enable();
         multiplyScore.performed += _ => ScoreMultiplier();
 
-        instance = this;
     }
     private void OnEnable()
     {
@@ -77,7 +78,7 @@ public class SLGameManager : MonoBehaviour
 
     private void OnPause(bool isPaused)
     {
-        gameSpeed = 0;
+         gameSpeed = 0;
     }
     private void OnReset()
     {

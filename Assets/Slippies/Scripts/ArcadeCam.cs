@@ -27,4 +27,9 @@ public class ArcadeCam : MonoBehaviour
         isAcadeCam = !isAcadeCam;
     }
 
+    public void DebugThisCam()
+    {
+        Debug.Log("camccam");
+    }
+
 }

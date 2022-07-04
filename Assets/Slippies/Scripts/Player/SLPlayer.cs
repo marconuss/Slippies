@@ -60,6 +60,7 @@ public class SLPlayer : MonoBehaviour
 
         highSnowLeftLimit = FindXLimit(SLGameManager.instance.GetLeftLimit()).x;
         highSnowRightLimit = FindXLimit(SLGameManager.instance.GetRightLimit()).x;
+
         if (transform.position.x < highSnowLeftLimit)
         {
             isInSlowZone = true;

@@ -5,12 +5,16 @@ using UnityEngine;
 public class SLSpawnable : MonoBehaviour
 {
     private Vector3 direction = Vector3.up;
-    private bool isAtTheEdge = false;
+    private bool isAtEdge = false;
 
     private LineRenderer[] lines;
     private BoxCollider2D[] colliders;
 
-    public float angle = 1;
+    private float edgePosY = 0f;
+    private float endPosY = -1.5f;
+
+    private int backgroundOrder = -1;
+    private int foregroundOrder = 1;
 
     private void Start()
     {
@@ -27,12 +31,6 @@ public class SLSpawnable : MonoBehaviour
         }
     }
 
-    private void OnReset()
-    {
-        gameObject.SetActive(false);
-    }
-
-
     void Update()
     {
         if (gameObject.activeInHierarchy)
@@ -40,38 +38,48 @@ public class SLSpawnable : MonoBehaviour
             var step = SLGameManager.instance.gameSpeed * Time.deltaTime;
             transform.Translate(direction * step);
 
-            if (transform.position.y > 0f)
+            if (transform.position.y > edgePosY)
             {
-                isAtTheEdge = true;
+                if (!isAtEdge)
+                {
+                    OnEdgeReached();
+                }
             }
 
-            if (isAtTheEdge)
+            if (transform.position.y < endPosY)
             {
-                foreach (var line in lines)
+                if (isAtEdge)
                 {
-                    line.sortingOrder = -1;
-                }
-                direction = Vector3.down;
-                foreach (var collider in colliders)
-                {
-                    collider.enabled = false;
-                }
-
-                if (transform.position.y < -1.5f)
-                {
-                    gameObject.SetActive(false);
-                    foreach (var line in lines)
-                    {
-                        line.sortingOrder = 1;
-                    }
-                    foreach (var collider in colliders)
-                    {
-                        collider.enabled = true;
-                    }
-                    isAtTheEdge = false;
-                    direction = Vector3.up;
+                    OnReset();
                 }
             }
         }
+    }
+    void OnEdgeReached()
+    {
+        isAtEdge = true;
+        foreach (var line in lines)
+        {
+            line.sortingOrder = backgroundOrder;
+        }
+        direction = Vector3.down;
+        foreach (var collider in colliders)
+        {
+            collider.enabled = false;
+        }
+    }
+    private void OnReset()
+    {
+        gameObject.SetActive(false);
+        foreach (var line in lines)
+        {
+            line.sortingOrder = foregroundOrder;
+        }
+        foreach (var collider in colliders)
+        {
+            collider.enabled = true;
+        }
+        isAtEdge = false;
+        direction = Vector3.up;
     }
 }

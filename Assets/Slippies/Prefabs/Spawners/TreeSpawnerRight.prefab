@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6723524919892771347}
   - component: {fileID: 6723524919892771344}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: TreeSpawnerRight
   m_TagString: Untagged
   m_Icon: {fileID: 0}

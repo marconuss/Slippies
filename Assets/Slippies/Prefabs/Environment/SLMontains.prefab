@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 216108116}
   - component: {fileID: 216108117}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Line
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -145,7 +145,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 319870242}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Snow (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -178,7 +178,7 @@ GameObject:
   m_Component:
   - component: {fileID: 821314824}
   - component: {fileID: 821314825}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Line
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -311,7 +311,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1074044920}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: mountain
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -343,7 +343,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1247026046}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: mountain
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -375,7 +375,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1366878803}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Snow  (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -408,7 +408,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1531793797}
   - component: {fileID: 1531793798}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Line
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -546,7 +546,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1826305075}
   - component: {fileID: 1826305076}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Line
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -618,7 +618,7 @@ LineRenderer:
   - {x: -6.849678, y: 1.5474762, z: 0}
   - {x: -6.441195, y: 1.2135034, z: 0}
   - {x: -5.748116, y: 0.98107976, z: 0}
-  - {x: -5.3608327, y: 0.5260512, z: -5.6604967}
+  - {x: -5.3608327, y: 0.5260512, z: 0}
   m_Parameters:
     serializedVersion: 3
     widthMultiplier: 0.1
@@ -684,7 +684,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4629986582178304849}
   - component: {fileID: 4629986582178304686}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: LineLeft_mountain
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -835,7 +835,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4629986582336430729}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: SLMontains
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -868,7 +868,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4629986582587829304}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: 'Snow '
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -901,7 +901,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4629986582710922601}
   - component: {fileID: 4629986582710922598}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: LineRight_mountain
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1054,7 +1054,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4629986583031242138}
   - component: {fileID: 4629986583031242139}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Line
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1190,7 +1190,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4629986583097108676}
   - component: {fileID: 4629986583097108677}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Line
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1325,7 +1325,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4629986583309173049}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Snow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1358,7 +1358,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4629986583316505842}
   - component: {fileID: 4629986583316505843}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Line
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1491,7 +1491,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4629986583586943104}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Snow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1523,7 +1523,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4629986583907043894}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: 'Snow '
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1556,7 +1556,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4629986583915658573}
   - component: {fileID: 4629986583915658570}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Line
   m_TagString: Untagged
   m_Icon: {fileID: 0}

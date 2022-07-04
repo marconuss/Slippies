@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 350931134831241056}
   - component: {fileID: 350931134831241063}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: RightSlopeLine
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -141,7 +141,7 @@ GameObject:
   m_Component:
   - component: {fileID: 350931135046548390}
   - component: {fileID: 350931135046548389}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: LeftSlopeLine
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -272,7 +272,7 @@ GameObject:
   m_Component:
   - component: {fileID: 350931135145725976}
   - component: {fileID: 350931135145725983}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: TopSlopeLine
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -402,7 +402,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 350931135603132462}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: SLSlopeEdges
   m_TagString: Untagged
   m_Icon: {fileID: 0}

@@ -94,7 +94,8 @@ public class SLMenu : MonoBehaviour
         {
             float step = speed * Time.unscaledDeltaTime;
             player.transform.localPosition = Vector3.MoveTowards(player.transform.localPosition, 
-                                                                 new Vector3(playerStartPosition.x, playerStartPosition.y -1, 0),
+                                                                 new Vector3(playerStartPosition.x, 
+                                                                             playerStartPosition.y -1, 0),
                                                                  step);
             if ((player.transform.localPosition.y - Vector3.down.y) < 0.01f)
             {

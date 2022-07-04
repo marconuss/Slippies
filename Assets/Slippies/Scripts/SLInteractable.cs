@@ -4,8 +4,7 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.Events;
 using UnityEngine.SceneManagement;
-
-public class Interactable : MonoBehaviour
+public class SLInteractable : MonoBehaviour
 {
     [SerializeField]
     private GameObject planeGameOn;

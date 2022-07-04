@@ -158,7 +158,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 1.7777778, y: 1}
+    m_SensorSize: {x: 0.71206224, y: 1}
     Iso: 200
     ShutterSpeed: 0.005
     Aperture: 16
@@ -244,8 +244,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 2.477495, y: 0.79, z: 0.64}
-  m_Center: {x: -0.9231052, y: 0, z: 0}
+  m_Size: {x: 2.852623, y: 0.79, z: 0.64}
+  m_Center: {x: -1.110669, y: 0, z: 0}
 --- !u!114 &1765814996
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -255,7 +255,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 829171834410801441}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4d15f4b4cc179414bad9c21ace367899, type: 3}
+  m_Script: {fileID: 11500000, guid: 0969f6a1de2dcff47bf3c4b108d6a9d0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   planeGameOn: {fileID: 2400098106667475628}
@@ -266,12 +266,12 @@ MonoBehaviour:
     m_Name: Action Key
     m_Type: 0
     m_ExpectedControlType: 
-    m_Id: dced06fc-97ac-4673-9e32-a376e5d6ddaf
+    m_Id: b823546a-97b3-40f3-b8f5-5332359339a1
     m_Processors: 
     m_Interactions: 
     m_SingletonActionBindings:
     - m_Name: 
-      m_Id: b7869226-6027-4afc-977a-a31b5cc328ed
+      m_Id: 914acb24-90df-451d-90bc-3393c39c5607
       m_Path: <Keyboard>/f
       m_Interactions: 
       m_Processors: 
@@ -279,7 +279,7 @@ MonoBehaviour:
       m_Action: Action Key
       m_Flags: 0
     - m_Name: 
-      m_Id: 19150a00-f7dc-4950-9676-e93cc0fa9b2a
+      m_Id: 2f92aba9-538e-4f13-87bd-d0c0572f14c7
       m_Path: <Gamepad>/buttonSouth
       m_Interactions: 
       m_Processors: 
@@ -396,7 +396,6 @@ GameObject:
   - component: {fileID: 2400098107835777415}
   - component: {fileID: 2400098107835777410}
   - component: {fileID: 2400098107835777413}
-  - component: {fileID: 2400098107835777411}
   - component: {fileID: 2215166920874810958}
   m_Layer: 0
   m_Name: ArcadeMachine
@@ -474,18 +473,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!114 &2400098107835777411
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2400098107835777414}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b30e956b0f20e9e45a85983e566c2f3b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!65 &2215166920874810958
 BoxCollider:
   m_ObjectHideFlags: 0
